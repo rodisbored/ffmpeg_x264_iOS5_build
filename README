@@ -1,11 +1,12 @@
 README:
 
-Scripts to build x264 enabled ffmpeg for iOS 5
+Scripts to build x264 enabled ffmpeg for iOS 5 (Xcode 4.2 default directory structure)
 
-copy gas-preprocessor.pl into your /usr/local/bin directory (or /usr/bin if the former is not in your path).
+gas-preprocessor.pl
+Copy into your /usr/local/bin directory (or /usr/bin if the former is not in your path).  The latest can be found at https://github.com/yuvi/gas-preprocessor, but this version works fine.
 
-build-x264
+build_x264 (use first)
 Uses Git to retrieve the latest versions of the x264 source code and initiate a build on them. Make sure you can use git. Creates two versions then lipo's them together.  Use the library packaged in x264-uarch
 
-build_ffmpeg_x264.sh
-Uses Git to retrieve the latest version of ffmpeg and do a build on it including the x264 library.  It also turns on the h264 encoders/decoders.
+build_ffmpeg_x264.sh (second)
+Uses Git to retrieve the latest version of ffmpeg and do a build on it including the x264 library.  It also turns on the h264 encoders/decoders. Builds versions for armv6 and armv7 and lipo's them together into ./build.universal.  The header files are in ./installed/include
