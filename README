@@ -1,0 +1,11 @@
+README:
+
+Scripts to build x264 enabled ffmpeg for iOS 5
+
+copy gas-preprocessor.pl into your /usr/local/bin directory (or /usr/bin if the former is not in your path).
+
+build-x264
+Uses Git to retrieve the latest versions of the x264 source code and initiate a build on them. Make sure you can use git. Creates two versions then lipo's them together.  Use the library packaged in x264-uarch
+
+build_ffmpeg_x264.sh
+Uses Git to retrieve the latest version of ffmpeg and do a build on it including the x264 library.  It also turns on the h264 encoders/decoders.
